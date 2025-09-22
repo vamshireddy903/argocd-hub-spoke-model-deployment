@@ -48,4 +48,4 @@ argocd: v2.x.x
 
 **NOTE:** Make sure you have curl installed: sudo apt update && sudo apt install curl -y
 
-
+for more info: https://argo-cd.readthedocs.io/en/stable/cli_installation/
