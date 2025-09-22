@@ -10,5 +10,5 @@ namePrefix: dev-
 
 # Transform replicas
 replicas:
-  - name: my-deployment         # must match the metadata.name in base/deployment.yaml
-    count: 3                    # number of replicas you want in dev
+  - name: tic-tac-toe       # must match the metadata.name in base/deployment.yaml
+    count: 2                    # number of replicas you want in dev
