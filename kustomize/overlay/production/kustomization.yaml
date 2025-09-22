@@ -3,7 +3,7 @@ kind: Kustomization
 
 # Inherit from base
 resources:
-  - ../../base
+- ../../base
 
 # Add a prefix to all resource names
 namePrefix: production-
