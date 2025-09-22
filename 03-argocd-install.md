@@ -49,3 +49,31 @@ argocd: v2.x.x
 **NOTE:** Make sure you have curl installed: sudo apt update && sudo apt install curl -y
 
 for more info: https://argo-cd.readthedocs.io/en/stable/cli_installation/
+
+# Argocd login through CLI
+
+    argocd login <ARGOCD_SERVER ip> 
+    
+exmaple: argocd login 16.282.22.19:30256
+
+provide username: admin
+password:
+
+to get the password 
+
+             kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
+# Verify login
+After successful login:
+
+    argocd account get-user-info
+
+# Add the cluster
+
+argocd cluster add <CONTEXT_NAME> --server <argocd serverip>
+
+example: argocd cluster add vamsi1@spoke-cluster1.ap-south-1.eksctl.io --server 65.0.31.150:32005
+
+<img width="1857" height="206" alt="image" src="https://github.com/user-attachments/assets/9aa043f5-a718-4ec0-a641-582154d91751" />
+
+
